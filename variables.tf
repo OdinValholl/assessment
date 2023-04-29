@@ -2,7 +2,11 @@
 variable "vm_count" {
   description = "Number of VMs to create"
   type        = number
-  default     = 1
+  default     = 2
+  validation {
+    condition     = var.vm_count >= 2 && var.vm_count <= 100
+    error_message = "The vm_count ${var.vm_count} must be between 2 and 100"
+  }
 }
 
 variable "resource_group_name" {
