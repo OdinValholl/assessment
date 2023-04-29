@@ -5,6 +5,7 @@ provider "azurerm" {
 
 # Generate random passwords for each VM
 resource "random_password" "admin_password" {
+  count            = var.vm_count
   length           = 16
   special          = true
   override_special = "_@%"
@@ -46,7 +47,7 @@ resource "azurerm_linux_virtual_machine" "vm" {
     azurerm_network_interface.nic[count.index].id
   ]
 
-  admin_password = random_password.admin_password.result
+  admin_password = random_password.admin_password[count.index].result
 
   os_disk {
     caching              = "ReadWrite"
