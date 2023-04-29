@@ -49,11 +49,11 @@ terraform destroy
 
 ## Variables
 
-| Variable             | Type   | Default        | Description                 |
-|----------------------|--------|----------------|-----------------------------|
-| vm_count             | number | 1              | Number of VMs to create     |
-| resource_group_name  | string | resource-group | Name of the resource group  |
-| location             | string | westeurope     | Azure region location       |
-| virtual_network_name | string | vnet           | Name of the virtual network |
-| subnet_name          | string | subnet         | Name of the subnet          |
-| vm_size              | string | Standard_B2s   | Size of the VMs             |
+| Variable             | Type   | Default        | Description                               |
+|----------------------|--------|----------------|-------------------------------------------|
+| vm_count             | number | 2              | Number of VMs to create between 2 and 100 |
+| resource_group_name  | string | resource-group | Name of the resource group                |
+| location             | string | westeurope     | Azure region location                     |
+| virtual_network_name | string | vnet           | Name of the virtual network               |
+| subnet_name          | string | subnet         | Name of the subnet                        |
+| vm_size              | string | Standard_B2s   | Size of the VMs                           |
