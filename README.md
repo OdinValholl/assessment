@@ -2,7 +2,7 @@
 
 ## Description
 
-This script provides VMs on Azure and the regarding infrastructure covering the following resources:
+This repository uses Terraform to provide VMs on Azure and the regarding infrastructure covering the following resources:
 * resource group including all resources
 * given number of VMs
 * generated passwords for VMs admins
@@ -10,6 +10,20 @@ This script provides VMs on Azure and the regarding infrastructure covering the 
 * subnet for virtual network
 * network interface for connecting the VMs to the underlying virtual network and handling the network traffic
 * virtual machine extensions to provide post deployment configuration and run automated tasks
+
+## Prerequisites
+
+* Terraform installed on your machine
+* Azure subscription with valid credentials
+
+To configure the AzureRM provider using environment variables:
+
+````
+export ARM_SUBSCRIPTION_ID=<ARM_SUBSCRIPTION_ID>
+export ARM_CLIENT_ID=<ARM_CLIENT_ID>
+export ARM_CLIENT_SECRET=<ARM_CLIENT_SECRET>
+export ARM_TENANT_ID=<ARM_TENANT_ID>
+````
 
 ## Usage
 
